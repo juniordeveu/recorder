@@ -1,7 +1,22 @@
 extends layouts/menuLayouts.pug
 block style 
     link(rel="stylesheet", href="/css/recorder.css")
-    title Recorde
+    title #{titlePageRecorder}
 block content
     body 
-        h1 Strona glówna
+   
+        if objRecord.lenght > 0 
+            each elementRecord in objRecord
+                .container-record 
+                    article.card.record-item
+                        header.card-header 
+                            h1.record-title #{ elementRecord.taskTitle }
+                            h3.record-link  #{ elementRecord.taskLink }
+                        .card-content 
+                            h2.record-description #{ elementRecord.taskDescription }
+                        .card-action 
+                            button.card-action__btn1 Kasuj
+                            button.card-action__btn2 Edytuj
+        else
+            h1 Brak rekordów
+                 

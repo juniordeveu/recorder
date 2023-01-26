@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.get( '*', ( req,res ) => {
     res.statusCode = 404;
-    res.render( 'page404.pug' );
+    res.render( 'page404.pug', { titlePage: '404 :(' } );
     res.end();
 })
 

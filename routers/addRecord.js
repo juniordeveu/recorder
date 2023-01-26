@@ -2,20 +2,30 @@ const express = require( 'express' );
 const { route } = require( './recorder' );
 const router = express.Router();
 
+let records = [];
 
 /* Page with form add new record */
 router.get( '/newrecord' , ( req, res ) => {
-    res.status( 200 ).render( "addRecord.pug" );
+    res.status( 200 ).render( "addRecord.pug", { titlePageAddRecord: 'New record' } );
     res.end();
 })
-
 
 router.post( '/record', ( req, res ) => {
-    res.statusCode( 304 );
-    res.setHeader( 'Location', '/' )
-    res.end();
-})
+    try {
+        records.push( { taskTitle:       req.body.taskTitle,
+                        taskLink:        req.body.taskLink,
+                        taskDescription: req.body.taskDescription } )
+        res.statusCode = 302;
+        res.setHeader( 'Location', '/' ) 
+        res.end();
+    } catch {
+        console.log( "Err" )
+    }
+
+} )
 
 
 
-module.exports = router;
+exports.routers = router;
+exports.records = records;
+

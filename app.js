@@ -9,13 +9,15 @@ const express = require( 'express' );
 const app = express();
 const path = require( 'path' );
 const pathUtils  = require( './utils/pathUtils' );
-
+const bodyParser = require('body-parser');
 
 /* import routs */
 const routerRecorder = require( './routers/recorder' ) 
 const routerAddNewRecord = require( './routers/addRecord' )
-const router404 = require( './routers/404')
+const router404 = require( './routers/404');
+
 /* end IR */
+app.use(bodyParser.urlencoded( { extended:false } ))
 
 /* set pug engine and  static files*/
 app.set( 'view engine', 'pug' );
@@ -26,8 +28,8 @@ app.use( express.static( path.join( pathUtils, 'public') ) )
 
 
 
-app.use( routerAddNewRecord );
+app.use( routerAddNewRecord.routers );
 app.use( routerRecorder );
-app.use( router404 );
+app.use( router404  );
 
 app.listen( config.port, config.info )

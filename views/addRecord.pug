@@ -1,7 +1,19 @@
 extends layouts/menuLayouts.pug
 block style
     link(rel="stylesheet", href="/css/addRecord.css")
+    title #{titlePageAddRecord}
 block content
     title Add New Record
     body 
         h1 Strona z formularzem
+    main 
+        .container-form 
+            form.record-form(action="/record", method="POST")
+                .form-control 
+                    label(for="task-title") Nazwa rekordu 
+                    input(type="text", id="task-title", name="taskTitle")
+                    label(for="task-link") Link  
+                    input(type="text", id="task-link", name="taskLink")
+                    label(for="task-description") Opis recordu  
+                    textarea(name="taskDescription" id="task-description" cols="30" rows="3")
+                    button.btn-form(type="submit") Dodaj record
