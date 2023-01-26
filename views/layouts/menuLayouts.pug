@@ -9,12 +9,13 @@ html(lang="en")
         title Document
     body
         header.main-header
+            img.main-logo(src="/img/logo.png")
             nav.main-header__nav
                 ul.main-header__item--list
                     li.mian-header__item
-                        a(href="/") My Records
+                        a.header__link(href="/") My Records
                     li.mian-header__item
-                        a(href="/newrecord" ) New Record
+                        a.header__link(href="/newrecord" ) New Record
                     li.mian-header__item
-                        a(href="") About Project
+                        a.header__link(href="") About Project
         block content

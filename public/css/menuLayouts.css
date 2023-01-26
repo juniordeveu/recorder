@@ -13,5 +13,49 @@ h1{
 
 }
 .main-header{
-    background-color: burlywood;
+    background: linear-gradient(45deg,rgb(209, 209, 209) 0%,rgb(255, 255, 255) 10% ,rgb(212, 212, 212) 80%,rgb(255, 0, 140) 20% );
+    box-shadow: 0px 0px 21px -3px black;
+    display:    flex;
+        flex-wrap:  wrap;
+    padding:    1rem;
+
+  
+}
+.main-logo{
+height:         100%;
+max-height:     2rem;
+margin:         .5rem 1rem;
+
+}
+
+.main-header__nav{
+    float:      left;
+    display:    flex;
+        justify-content:    center;
+        align-items:        center;
+    width:      70%;
+
+    
+}
+.main-header__item--list{
+    display:    flex;
+        flex-flow:  row wrap;
+    list-style: none;
+  
+}
+.mian-header__item{
+    margin:             .2rem 1rem ;
+    letter-spacing:     .2rem;
+
+}
+.header__link{
+    color:             rgb(255, 0, 140);  
+    text-decoration:    none;
+    transition:         color 1s ease;
+
+  
+}
+.header__link:hover{
+    color:  rgb(255, 136, 0);
+
 }
