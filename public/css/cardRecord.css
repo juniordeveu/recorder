@@ -1,0 +1,109 @@
+*{
+    box-sizing:     border-box;
+    font-size:      20px;
+    margin:         0;
+    padding:        0;
+}
+
+p {
+    margin: .4rem 0;
+  
+}
+
+.container-record{
+    animation: animationShowCard 2s ease;
+    background-color: rgb(255, 237, 227) ;
+    box-shadow:         0px 0px 20px -12px rgb( 0, 0, 0 );
+    float:              left;
+    height:             auto;
+    margin:             2rem 1rem;
+    max-width:          25rem;
+    width:              100%;
+    
+  
+}
+@keyframes animationShowCard {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+.card.record-item{
+    height:             100%;
+    letter-spacing:     .2rem;
+
+
+
+}
+.card-header {
+  
+}
+
+.record-title{
+    background-color:  rgb(250, 216, 197) ;
+    padding:        1rem;
+    width:          100%;
+}
+.record-title__p{
+    color:        rgb(0, 0, 0);
+    letter-spacing: .2rem;
+    font-family:      'Michroma', sans-serif;
+    font-size: .7rem;
+
+}
+.record-link{
+    margin:         2rem 0 0 0;
+    padding:        1rem;
+   
+}
+.record-link__p{
+    color:          rgb(0, 174, 255);
+    font-family:      'Saira Condensed', sans-serif;
+    font-size:         .6rem;
+    word-wrap:         break-word;
+
+}
+
+.card-content {
+    margin:         2rem 0;
+    padding:        1rem;
+    word-wrap:      break-word;
+}
+.record-description{
+
+}
+.record-description__p{
+    font-family:      'Michroma', sans-serif;
+    font-size: .7rem;
+}
+.card-action {
+    background-color:  rgb(250, 216, 197) ;
+    display:    flex;
+        flex-flow:          row wrap;
+        justify-content:    center;
+
+}
+.card-action__btn1,
+.card-action__btn2{
+    background-color:   transparent;
+    border-radius:      1rem;
+    border:             1px solid rgba(255, 0, 0, 0.418);
+    cursor:             pointer;
+    font-family:        'Quattrocento Sans', sans-serif;
+    margin:             1rem 1rem;
+    padding:            .2rem;
+    transition:         box-shadow 1s , background 1s ease;
+    width:              7rem;
+
+
+}
+.card-action__btn2{
+    border:         1px solid rgba(44, 109, 250, 0.582);
+}
+
+.card-action__btn1:hover,
+.card-action__btn2:hover{
+    background:       rgb(255, 181, 137) ;
+    box-shadow:         2px 2px 4px -1px black;
+
+}

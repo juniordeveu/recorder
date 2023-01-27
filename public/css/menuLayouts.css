@@ -14,7 +14,7 @@ h1{
 }
 .main-header{
     background: linear-gradient(45deg,rgb(209, 209, 209) 0%,rgb(255, 255, 255) 10% ,rgb(212, 212, 212) 80%,rgb(255, 0, 140) 20% );
-    box-shadow: 0px 0px 21px -3px black;
+    box-shadow: 0px 0px 21px 13px black;
     display:    flex;
         flex-wrap:  wrap;
     padding:    1rem;
@@ -55,7 +55,9 @@ margin:         .5rem 1rem;
 
   
 }
+
 .header__link:hover{
     color:  rgb(255, 136, 0);
-
+   
+    
 }

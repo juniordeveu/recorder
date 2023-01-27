@@ -1,22 +1,36 @@
 extends layouts/menuLayouts.pug
 block style 
     link(rel="stylesheet", href="/css/recorder.css")
+    link(rel="stylesheet", href="/css/cardRecord.css")
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Michroma&family=Paytone+One&family=Quattrocento+Sans&family=Saira+Condensed:wght@100&display=swap" rel="stylesheet")
     title #{titlePageRecorder}
 block content
-    body 
-   
-        if objRecord.lenght > 0 
-            each elementRecord in objRecord
-                .container-record 
-                    article.card.record-item
-                        header.card-header 
-                            h1.record-title #{ elementRecord.taskTitle }
-                            h3.record-link  #{ elementRecord.taskLink }
-                        .card-content 
-                            h2.record-description #{ elementRecord.taskDescription }
-                        .card-action 
-                            button.card-action__btn1 Kasuj
-                            button.card-action__btn2 Edytuj
-        else
-            h1 Brak rekordów
+    body
+        main.container-main
+            header.info-box
+                div.info-box--animation
+                    h1.info-box__text Recorder
+                .arrow-box 
+                    a(href="#record").arrow-sign &#x2193
+            article.article-card
+                if objRecord.length > 0 
+                    each elementRecord in objRecord
+                        .container-record 
+                            section.card.record-item
+                                header.card-header#record 
+                                    h1.record-title Record
+                                        p.record-title__p #{elementRecord.taskTitle}
+                                    h3.record-link Link 
+                                        p.record-link__p #{elementRecord.taskLink}
+                                .card-content 
+                                    h2.record-description Opis 
+                                        p.record-description__p #{elementRecord.taskDescription}
+                                .card-action 
+                                    button.card-action__btn1 Kasuj
+                                    button.card-action__btn2 Edytuj
+                else
+                    h1 Brak rekordów
+        script(src="/js/recordHeader.js")
                  

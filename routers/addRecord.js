@@ -14,12 +14,12 @@ router.post( '/record', ( req, res ) => {
     try {
         records.push( { taskTitle:       req.body.taskTitle,
                         taskLink:        req.body.taskLink,
-                        taskDescription: req.body.taskDescription } )
+                        taskDescription: req.body.taskDescription } );
         res.statusCode = 302;
-        res.setHeader( 'Location', '/' ) 
+        res.setHeader( 'Location', '/' );
         res.end();
     } catch {
-        console.log( "Err" )
+        console.log( "Err" );
     }
 
 } )
