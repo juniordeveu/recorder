@@ -1,11 +1,13 @@
 extends layouts/menuLayouts.pug
 block style
     link(rel="stylesheet", href="/css/addRecord.css")
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Michroma&family=Paytone+One&family=Quattrocento+Sans&family=Saira+Condensed:wght@100&display=swap" rel="stylesheet")
     title #{titlePageAddRecord}
 block content
     title Add New Record
     body 
-        h1 Strona z formularzem
     main 
         .container-form 
             form.record-form(action="/record", method="POST")
@@ -14,6 +16,6 @@ block content
                     input(type="text", id="task-title", name="taskTitle")
                     label(for="task-link") Link  
                     input(type="text", id="task-link", name="taskLink")
-                    label(for="task-description") Opis recordu  
-                    textarea(name="taskDescription" id="task-description" cols="10" rows="3")
-                    button.btn-form(type="submit") Dodaj record
+                    label(for="task-description") Opis rekordu  
+                    textarea(name="taskDescription" id="task-description" cols="21" rows="3")
+                    button.btn-form(type="submit") Dodaj rekord

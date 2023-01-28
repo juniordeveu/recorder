@@ -1,8 +1,14 @@
 extends layouts/menuLayouts.pug
 
+
 block style
     link(rel="stylesheet", href="/css/404.css")
     title #{titlePage}
 block content
-    h1 Page not Found 
-        p 404
+    body 
+        main.container
+            div.box
+                h1.box--h1 Page not Found 
+                    p.box--p 404
+
+    

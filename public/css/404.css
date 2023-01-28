@@ -8,6 +8,25 @@
 body{
     background-color:    rgb(238, 73, 73);
 }
-h1{
-    color: rgb(255, 208, 0);
+
+
+.container{
+    height:         40rem;
+}
+.box{
+    display:        flex;
+        justify-content:    center;
+        align-items:        center;
+    height:         100%;
+    width:          100%;
+  
+}
+.box--h1{
+    color:      yellow;
+    font-size:    5vw;
+    
+}
+.box--p{
+    font-size:      20vw;
+   
 }

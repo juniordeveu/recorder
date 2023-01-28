@@ -1,0 +1,40 @@
+
+
+.footer-container {
+    background-color: rgb(17, 17, 17);
+    height: 15rem;
+    max-height: 100%;
+   
+    
+}
+
+
+
+.footer-box{
+    display: flex;
+        flex-flow: row ;
+    height: inherit;
+
+}
+.footer-box__box{
+
+    height: inherit;
+
+}
+
+.box1 ,
+.box3{
+    width: 9%;
+}
+.box2{
+    display: flex;
+        align-items:center;
+        justify-content: center; 
+    letter-spacing: .5rem;
+    width: 90%;
+    font-size: 11rem ;
+}
+.footer-box__box--p{
+    font-size: 1vw;
+    color: antiquewhite;
+}

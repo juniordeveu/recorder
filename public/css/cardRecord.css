@@ -12,7 +12,7 @@ p {
 
 .container-record{
     animation: animationShowCard 2s ease;
-    background-color: rgb(255, 237, 227) ;
+    background-color: rgb(255, 243, 237) ;
     box-shadow:         0px 0px 20px -12px rgb( 0, 0, 0 );
     float:              left;
     height:             auto;
