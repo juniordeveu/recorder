@@ -38,3 +38,15 @@
     font-size: 1vw;
     color: antiquewhite;
 }
+
+/* media */
+@media only screen and (width >576px)    {
+    .footer-container {
+        height: 5rem;
+    }
+}
+@media only screen and (width <=576px)    {
+    .footer-container {
+        height: 5rem;
+    }
+}

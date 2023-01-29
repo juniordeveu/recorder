@@ -106,3 +106,36 @@ margin:             10rem 0 1rem 0;
     margin:         5rem 0;
 
 }
+/* MEdia */
+
+@media only screen and (width > 1200px)    {
+    .info-box{
+        height: 30rem;
+        }
+
+}
+@media only screen and (width <= 1200px)    {
+
+    .info-box{
+        height: 17rem;
+    }
+    .arrow-box{
+        margin:             3.5rem 0 2rem 0;
+    }
+}
+@media only screen and (width <= 576px)    {
+    .arrow-box{
+        margin:             5rem 0 2rem 0;
+    }
+    .info-box{
+        height:         12rem;
+    }
+    .arrow-sign{
+        font-size:      1.5rem;
+    }
+    .container-empty {
+
+        height:         20rem;
+
+    }
+}
